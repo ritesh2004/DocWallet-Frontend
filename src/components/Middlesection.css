@@ -1,0 +1,45 @@
+.section-con{
+    height: 300px;
+    background-color: #f3f2f8;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 50px;
+}
+.text{
+    font-family: Montserrat;
+    font-weight: bold;
+    font-size: x-large;
+    padding: 5px;
+    width: 300px;
+}
+.figure{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 50px;
+    align-items: center;
+}
+.ionicon{
+    height: 50px;
+    color: blue;
+}
+.icons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: blue;
+    font-family: Roboto;
+    font-size: large;
+}
+.icons svg{
+    height: 90px;
+    width: 90px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 50%;
+}

@@ -1,0 +1,25 @@
+.card{
+    width: 300px;
+    height: 150px;
+    border: solid 1px white;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    background-color: transparent;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    backface-visibility: visible;
+    backdrop-filter: blur(5px);
+}
+#card-title{
+    font-family: Montserrat;
+    font-weight: bolder;
+}
+.card span{
+    padding: 5px 10px;
+    background-color: blue;
+    color: yellow;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 20px;
+}
