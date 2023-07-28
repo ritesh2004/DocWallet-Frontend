@@ -3,8 +3,10 @@ import Slider from 'react-slick';
 import './Cardslider.css'
 import { Typography } from '@mui/material';
 import Card from './Card';
+import { useNavigate } from 'react-router-dom';
 
 function Cardslider() {
+    const navigate = useNavigate()
     const settings = {
         dots: false,
         infinite: true,
@@ -22,13 +24,13 @@ function Cardslider() {
                 </Typography>
                 <div className="cardslider">
                     <Slider {...settings}>
-                        <div>
+                        <div onClick={()=>navigate('/home')}>
                             <Card name="ABC ID" color="blue" />
                         </div>
-                        <div>
+                        <div onClick={()=>navigate('/home')}>
                             <Card name="PAN CARD" color="yellow" />
                         </div>
-                        <div>
+                        <div onClick={()=>navigate('/home')}>
                             <Card name="VOTER CARD" color="purple" />
                         </div>
                     </Slider>

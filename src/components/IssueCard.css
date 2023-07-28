@@ -1,0 +1,26 @@
+.issuedcard{
+    width: 350px;
+    height: 250px;
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 4px 7px 15px 0 rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    position: relative;
+}
+.issuedcard img{
+    height: 200px;
+    width: 300px;
+    filter: blur(5px);
+}
+#view{
+    position: absolute;
+    top: 50%;
+    color: blueviolet;
+    font-family: Montserrat;
+    font-weight: bold;
+}

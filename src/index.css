@@ -6,3 +6,13 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
+#wlc{
+    color: blue;
+    font-family: Montserrat;
+    font-weight: 500;
+    margin: 20px;
+}
+#wlc span{
+    color: blueviolet;
+    font-weight: bold;
+}

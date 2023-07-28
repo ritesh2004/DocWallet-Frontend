@@ -4,16 +4,24 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { BrowserRouter,Route,Routes } from 'react-router-dom';
 import Signin from './pages/Signin';
+import Home from './pages/Home';
 import Signup from './pages/Signup';
+import { Authprovider } from './context/Authcontext';
+import Privateroute from './utils/Privateroute';
 
 function App() {
   return (
     <BrowserRouter>
+    <Authprovider>
       <Routes>
         <Route path='/' Component={Homepage}/>
+        <Route Component={Privateroute}>
+        </Route>
+        <Route path='/home' Component={Home}/>
         <Route path='/signin' Component={Signin}/>
         <Route path='/signup' Component={Signup}/>
       </Routes>
+    </Authprovider>
     </BrowserRouter>
   );
 }
