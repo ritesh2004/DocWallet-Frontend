@@ -2,6 +2,7 @@ import { AppBar, Container, ThemeProvider, Toolbar, Typography, colors, createTh
 import React, { useContext } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import Authcontext from '../context/Authcontext'
+import {Button} from '@mui/material'
 
 
 function Header() {
@@ -13,7 +14,7 @@ function Header() {
             }
         }
     })
-    let {user} = useContext(Authcontext);
+    let {user,LogoutUser} = useContext(Authcontext);
     const navigate = useNavigate();
   return (
     <div className='header'>
@@ -22,10 +23,12 @@ function Header() {
                 <Container>
             <Toolbar>
             <Container sx={{flexGrow:1,display:'flex'}}>
+            <div onClick={()=>navigate('/')}>
 
-                    <Typography variant='h4' sx={{color:'blue',fontFamily:'Montserrat',fontWeight:'bold',textShadow:'-3px 4px 9px rgb(0 0 0 / 50%)'}}>
+                    <Typography variant='h4' sx={{color:'blue',fontFamily:'Montserrat',fontWeight:'bold',textShadow:'-3px 4px 9px rgb(0 0 0 / 50%)',cursor:'pointer'}}>
                         DocWallet
                     </Typography>
+            </div>
                     {/* <img src='https://www.digilocker.gov.in/assets/img/digilocker_logo.png' height={43} width={209}/>
                     <img style={{marginLeft:'20px'}} src='https://www.digilocker.gov.in/assets/img/dlg20_logo.png' height={39} width={74}/> */}
             </Container>
@@ -37,7 +40,7 @@ function Header() {
                 <div onClick={()=>{navigate('/signup')}}>
                 <Typography style={{backgroundColor:'blue',color:'white',padding:'0 10px 0 10px',borderRadius:'15px',cursor:'pointer'}}>Sign up</Typography>
                 </div>
-            </div></>:<span><Typography sx={{fontFamily:'Montserrat',fontWeight:'bold'}}>{user}</Typography></span>}                       
+            </div></>:<span style={{display:'flex',justifyContent:'center',alignItems:'center',gap:'20px',width:'25%'}}><Typography sx={{fontFamily:'Montserrat',fontWeight:'bold'}}>{user}</Typography> <Button variant='contained' onClick={()=>LogoutUser()}>Log Out</Button> </span>}                       
                     
             </Toolbar>
                 </Container>

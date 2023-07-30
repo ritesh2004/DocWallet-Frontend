@@ -19,7 +19,7 @@ function Signup() {
     const [conPass,setConPass] = useState("");
 
     // const [err,setErr] = useState(false);
-    let {Signin,err,success} = useContext(Authcontext);
+    let {signupUser,errsignup,isLogged} = useContext(Authcontext);
 
 
     return (
@@ -33,7 +33,7 @@ function Signup() {
                 </Typography>
                 <span>Sign Up</span>
                 <br />
-                <form onSubmit={Signin}>
+                <form onSubmit={signupUser}>
                     <Typography variant='h5'>Email Address</Typography>
                     <input type="email" name='email' onChange={(e)=>setEmail(e.target.value)} value={email} placeholder="name@example.com" />
                     <Typography variant='h5'>Username</Typography>
@@ -44,8 +44,8 @@ function Signup() {
                     <input type="password" name='password' onChange={(e)=>setPassword(e.target.value)} value={password} placeholder="Password" />
                     <Typography variant='h5'>Confirm Password</Typography>
                     <input type="password" name='conPass' onChange={(e)=>setConPass(e.target.value)} value={conPass} placeholder="Confirm Password" />
-                    {/* {err?<span style={{color:'red',fontWeight:'300'}}>Something Went Wrong!</span>:<span></span>} */}
-                    {success?<span style={{color:'green',fontWeight:'300'}}>{success}</span>:err?<span style={{color:'red',fontWeight:'300'}}>Something Went Wrong!</span>:<span></span>}
+                    {errsignup?<span style={{color:'red',fontWeight:'300'}}>Passwords are not same</span>:<span></span>}
+                    {isLogged?<span style={{color:'red',fontWeight:'300',marginTop:'8px'}}>You are already logged in using another account</span>:<span></span>}
                     <Button id='sign-btn' type='submit' variant='contained'>Sign Up</Button>
                 </form>
                 <span>Already have an account? <Link to={'/signin'}>Sign In</Link></span>

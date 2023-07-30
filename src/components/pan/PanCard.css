@@ -1,0 +1,41 @@
+.pancard #logo{
+    width: 400px;
+}
+#chip{
+    height: 50px;
+}
+#qrcode{
+    height: 50px;
+}
+.pancard{
+    display: flex;
+    flex-direction: column;
+    /* gap: 20px; */
+    /* padding: 10px; */
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    /* border: solid 1px black; */
+}
+.first-sec{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.pan-no{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#profile{
+    height: 80px;
+}
+.det{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}

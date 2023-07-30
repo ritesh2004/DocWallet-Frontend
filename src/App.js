@@ -8,6 +8,8 @@ import Home from './pages/Home';
 import Signup from './pages/Signup';
 import { Authprovider } from './context/Authcontext';
 import Privateroute from './utils/Privateroute';
+import AadharCard from './components/aadhar/AadharCard';
+import PanCard from './components/pan/PanCard';
 
 function App() {
   return (
@@ -16,8 +18,10 @@ function App() {
       <Routes>
         <Route path='/' Component={Homepage}/>
         <Route Component={Privateroute}>
-        </Route>
+        <Route path='/aadhaar' Component={AadharCard}/>
+        <Route path='/pan' Component={PanCard}/>
         <Route path='/home' Component={Home}/>
+        </Route>
         <Route path='/signin' Component={Signin}/>
         <Route path='/signup' Component={Signup}/>
       </Routes>

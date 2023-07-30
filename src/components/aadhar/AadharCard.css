@@ -1,0 +1,23 @@
+.det img{
+    height: 80px;
+}
+.det{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+}
+.aadharcard{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: black;
+}
+#aadharno{
+    margin-top: 20px;
+    margin-left: 50px;
+    font-family: Montserrat;
+    font-weight: bolder;
+}

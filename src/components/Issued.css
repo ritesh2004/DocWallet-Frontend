@@ -5,3 +5,8 @@
     align-items: center;
     gap: 50px;
 }
+.issue-content{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
